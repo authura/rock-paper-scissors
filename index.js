@@ -33,7 +33,7 @@ function playRound(playerSelection, computerSelection) {
         return `You lose! Rock smashes Scissors! Score: ${playerScore} to ${computerScore}`;
     } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
         playerScore++;
-        return `You win! Rock smashes Scissors! Score: ${playerScore} to ${computerScore}`
+        return `You win! Rock smashes Scissors! Score: ${playerScore} to ${computerScore}`;
     } else {
         return `Draw! Score: ${playerScore} to ${computerScore}`;
     }
