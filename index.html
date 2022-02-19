@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8e547e1dac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <main>
 
+    <header>
+        <h1>Rock Paper Scissors</h1>
+        <button class="btn btn-default btn-primary">Start New Game</button>
+    </header>
+
+
+    <main>
+        <div id="display"></div>
+        <div id="button-group">
+            <button class="btn" id="rock-btn">R</button>
+            <button class="btn" id="paper-btn">P</button>
+            <button class="btn" id="scissors-btn">S</button>
+        </div>
     </main>
 
-    <script src="index.js"></script>
+
+    
+    <script src="app.js"></script>
 </body>
 </html>
