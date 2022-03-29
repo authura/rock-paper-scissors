@@ -27,11 +27,11 @@ choices.forEach(choice => choice.addEventListener('click', (e) => {
 const computerPlay = () => {
     const num = Math.floor(Math.random() * 3);
     
-    if (num <= 1) {
+    if (num === 0) {
         computerChoice = "rock";
-    } else if (num >= 2) {
+    } else if (num === 1) {
         computerChoice = "paper";
-    } else {
+    } else if (num === 2) {
         computerChoice = "scissors";
     }
     
@@ -39,7 +39,9 @@ const computerPlay = () => {
 }
 
 const getResult = () => {
-    if (computerChoice === "rock" && playerChoice === "paper") {
+    if (computerChoice === playerChoice) {
+        result = "draw!";
+    } else if (computerChoice === "rock" && playerChoice === "paper") {
         result = "you win!";
         playerScore++;
         playerScoreDisplay.innerHTML = playerScore;
@@ -63,8 +65,6 @@ const getResult = () => {
         result = "you lose!"
         computerScore++;
         computerScoreDisplay.innerHTML = computerScore;
-    } else {
-        result = "draw!"
     }
         
     resultDisplay.innerHTML = result;
